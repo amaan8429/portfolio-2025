@@ -3,6 +3,7 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import SiteFooter from "@/components/footer";
+import { KeyboardShortcutsProvider } from "@/components/keyboard-shortcuts-provider";
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -25,7 +26,7 @@ export default function RootLayout({
         className={`${jetBrainsMono.variable} ${jetBrainsMono.variable} antialiased`}
       >
         <ThemeProvider>
-          {children}
+          <KeyboardShortcutsProvider>{children}</KeyboardShortcutsProvider>
           <SiteFooter />
         </ThemeProvider>
       </body>
