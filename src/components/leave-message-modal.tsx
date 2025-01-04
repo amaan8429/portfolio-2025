@@ -54,10 +54,13 @@ export function LeaveMessageModal() {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Leave an Anonymous Message</DialogTitle>
+          <DialogTitle className="text-foreground">
+            Leave an Anonymous Message
+          </DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4">
           <Textarea
+            className="text-foreground"
             placeholder="Type your message here..."
             value={message}
             onChange={(e) => setMessage(e.target.value)}

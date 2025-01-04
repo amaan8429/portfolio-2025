@@ -33,7 +33,7 @@ export function TechStackShowcase() {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Our Tech Stack</DialogTitle>
+          <DialogTitle className="text-foreground">Our Tech Stack</DialogTitle>
         </DialogHeader>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 py-4">
           {techStack.map((tech) => (

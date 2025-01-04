@@ -76,7 +76,7 @@ export default function SiteFooter() {
                 className="p-2 rounded-lg hover:bg-accent"
                 aria-label="Twitter"
               >
-                <Twitter className="w-5 w-5" />
+                <Twitter className="w-5" />
               </Link>
             </div>
           </div>

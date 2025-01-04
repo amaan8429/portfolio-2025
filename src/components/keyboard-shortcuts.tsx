@@ -29,9 +29,11 @@ export function KeyboardShortcuts() {
           <span className="sr-only">Keyboard shortcuts</span>
         </Button>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="text-foreground">
         <DialogHeader>
-          <DialogTitle>Keyboard Shortcuts</DialogTitle>
+          <DialogTitle className="text-foreground">
+            Keyboard Shortcuts
+          </DialogTitle>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           {shortcuts.map((shortcut, index) => (

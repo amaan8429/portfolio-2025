@@ -69,12 +69,10 @@ export default function Socials() {
                   scrambleSpeed={25}
                   scrambledLetterCount={5}
                   autoStart={false}
-                  className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium group-hover:text-primary"
+                  className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium"
                   scrambledClassName="text-gray-400"
                 />
-                <span className="text-sm text-gray-400 group-hover:text-primary">
-                  →
-                </span>
+                <span className="text-sm text-gray-400">→</span>
               </div>
             </a>
           ))}
