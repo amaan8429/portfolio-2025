@@ -39,7 +39,10 @@ export default function Home() {
         router.push("/reviews");
         break;
       case 6:
-        window.open("https://drive.google.com/  ", "_blank");
+        window.open(
+          "https://drive.google.com/file/d/1ETTwomyAnnxRrkOWAk4gQ0wgo1LsWXdv/view",
+          "_blank"
+        );
         break;
     }
   };
