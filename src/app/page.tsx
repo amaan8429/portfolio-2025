@@ -3,18 +3,11 @@
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import ScrambleIn, { ScrambleInHandle } from "@/components/scramble-in";
+import { titles } from "@/data/headings";
 
 export default function Home() {
   const router = useRouter();
-  const titles = [
-    "About Me",
-    "Projects",
-    "Blogs",
-    "Socials",
-    "Tech Stacks",
-    "Reviews",
-    "Resume",
-  ];
+
   const scrambleRefs = useRef<(ScrambleInHandle | null)[]>([]);
   useEffect(() => {
     titles.forEach((_, index) => {
@@ -28,25 +21,27 @@ export default function Home() {
   const handleClick = (index: number) => {
     switch (index) {
       case 0:
-        router.push("/about-me");
+        router.push("/simple");
         break;
       case 1:
-        router.push("/projects");
+        router.push("/about-me");
         break;
       case 2:
-        router.push("/blogs");
+        router.push("/projects");
         break;
       case 3:
-        router.push("/socials");
+        router.push("/blogs");
         break;
       case 4:
-        router.push("/tech-stacks");
+        router.push("/socials");
         break;
       case 5:
-        router.push("/reviews");
+        router.push("/tech-stacks");
         break;
       case 6:
-        //direct resume link
+        router.push("/reviews");
+        break;
+      case 7:
         window.open("https://drive.google.com/  ", "_blank");
         break;
     }
