@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { aboutMe } from "@/data/aboutMe";
 
 export default function AboutMe() {
   return (
@@ -23,10 +24,7 @@ export default function AboutMe() {
         </div>
 
         <p className="mb-8 text-center text-lg sm:text-xl md:text-2xl leading-relaxed">
-          Hi, I&lsquo;m Amaan, a freelance developer from Lucknow, India. I work
-          with Next.js and Flutter sometimes. You can find me on Twitter,
-          usually shitposting (and occasionally posting useless stuff too).
-          I&lsquo;m open to work!
+          {aboutMe}
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">
