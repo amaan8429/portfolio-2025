@@ -66,8 +66,7 @@ export const projectsData = [
   },
   {
     title: "gallery",
-    description:
-      "a better way to manage your bookmarks rather than saving them in browser and forgetting about them",
+    description: "a google photos clone",
     techStack: [
       "Next.js",
       "TypeScript",
@@ -146,6 +145,6 @@ export const projectsData = [
       "light and dark mode",
     ],
     github: "https://github.com/amaan8429/portfolio-2025",
-    demo: "amaaniac.xyz",
+    demo: "amaaniac.tech",
   },
 ];
