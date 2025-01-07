@@ -36,12 +36,9 @@ export default function Home() {
         router.push("/socials");
         break;
       case 5:
-        router.push("/tech-stacks");
-        break;
-      case 6:
         router.push("/reviews");
         break;
-      case 7:
+      case 6:
         window.open("https://drive.google.com/  ", "_blank");
         break;
     }
