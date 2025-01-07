@@ -1,71 +1,63 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import ScrambleIn, { ScrambleInHandle } from "@/components/scramble-in";
-import { useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
+import Float from "@/components/float";
+
+const techStacks = [
+  { text: "Next.js", position: "top-[0%] left-[20%]" },
+  { text: "React.js", position: "top-[20%] left-[80%]" },
+  { text: "JavaScript", position: "top-[70%] left-[40%]" },
+  { text: "Dart", position: "top-[80%] left-[30%]" },
+  { text: "Ngnix", position: "top-[40%] left-[0%]" },
+  { text: "AI", position: "top-[15%] left-[45%]" },
+  { text: "TypeScript", position: "top-[65%] left-[85%]" },
+  { text: "Tailwind CSS", position: "top-[85%] left-[15%]" },
+  { text: "ShadcnUI", position: "top-[35%] left-[75%]" },
+  { text: "Neon", position: "top-[75%] left-[55%]" },
+  { text: "Drizzle", position: "top-[25%] left-[35%]" },
+  { text: "zustand", position: "top-[45%] left-[25%]" },
+  { text: "Prisma", position: "top-[55%] left-[65%]" },
+  { text: "Python", position: "top-[90%] left-[45%]" },
+  { text: "PostgreSQL", position: "top-[10%] left-[70%]" },
+  { text: "MongoDB", position: "top-[60%] left-[10%]" },
+  { text: "Redis", position: "top-[30%] left-[50%]" },
+  { text: "Postman", position: "top-[95%] left-[60%]" },
+  { text: "Posthog", position: "top-[5%] left-[90%]" },
+  { text: "Vercel", position: "top-[82%] left-[75%]" },
+  { text: "Upstash", position: "top-[28%] left-[15%]" },
+  { text: "Firebase", position: "top-[67%] left-[5%]" },
+  { text: "Supabase", position: "top-[92%] left-[25%]" },
+  { text: "Solidity", position: "top-[28%] left-[95%]" },
+  { text: "Hardhat", position: "top-[73%] left-[20%]" },
+  { text: "Flutter", position: "top-[8%] left-[40%]" },
+];
 
 export default function TechStacks() {
-  const titles = ["1. Frontend", "2. Backend", "3. DevOps", "4. Tools"];
-  const scrambleRefs = useRef<(ScrambleInHandle | null)[]>([]);
-  const router = useRouter();
-
-  const handleClick = (index: number) => {
-    switch (index) {
-      case 0:
-        router.push("/tech-stacks/frontend");
-        break;
-      case 1:
-        router.push("/tech-stacks/backend");
-        break;
-      case 2:
-        router.push("/tech-stacks/devops");
-        break;
-      case 3:
-        router.push("/tech-stacks/tools");
-        break;
-    }
-  };
-
-  useEffect(() => {
-    titles.forEach((_, index) => {
-      const delay = index * 50;
-      setTimeout(() => {
-        scrambleRefs.current[index]?.start();
-      }, delay);
-    });
-  }, []);
-
   return (
-    <main className="min-h-screen w-full flex flex-col">
-      <header className="w-full p-4 sm:p-6 md:p-8">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
-          Tech Stacks
-        </h1>
-      </header>
-
-      <section className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16">
-        <div className="grid gap-6 sm:gap-8 md:gap-10">
-          {titles.map((title, index) => (
-            <div
-              key={index}
-              className="transform hover:scale-105 transition-transform duration-200 cursor-pointer"
-              onClick={() => handleClick(index)}
-            >
-              <ScrambleIn
-                ref={(el) => {
-                  scrambleRefs.current[index] = el;
-                }}
-                text={title}
-                scrambleSpeed={25}
-                scrambledLetterCount={5}
-                autoStart={false}
-                className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium"
-                scrambledClassName="text-gray-400"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
-    </main>
+    <div className="w-full h-full flex flex-col min-h-screen items-center justify-center bg-background relative">
+      {techStacks.map((item, i) => (
+        <Float
+          key={i}
+          timeOffset={i * 0.8}
+          amplitude={[
+            15 + Math.random() * 20,
+            25 + Math.random() * 30,
+            20 + Math.random() * 25,
+          ]}
+          rotationRange={[
+            10 + Math.random() * 10,
+            10 + Math.random() * 10,
+            5 + Math.random() * 5,
+          ]}
+          speed={0.3 + Math.random() * 0.4}
+          className={cn(
+            "absolute text-lg flex sm:text-xl md:text-2xl font-light hover:underline cursor-pointer text-[#0015ff]",
+            item.position
+          )}
+        >
+          <p>{item.text}</p>
+        </Float>
+      ))}
+    </div>
   );
 }

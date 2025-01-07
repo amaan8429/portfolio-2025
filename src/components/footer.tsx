@@ -6,9 +6,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { ModeToggle } from "./theme-toggle";
 import { VisitorCounter } from "./visitor-counter";
-import { KeyboardShortcuts } from "./keyboard-shortcuts";
 import { TimeToRead } from "./time-to-read";
-import { TechStackShowcase } from "./tech-stack-showcase";
 import { LeaveMessageModal } from "./leave-message-modal";
 
 export default function SiteFooter() {
@@ -52,8 +50,6 @@ export default function SiteFooter() {
                 loop
                 className="hidden"
               />
-              <KeyboardShortcuts />
-              <TechStackShowcase />
               <LeaveMessageModal />
             </div>
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export default function AboutMe() {
@@ -10,19 +11,29 @@ export default function AboutMe() {
         </h1>
       </header>
 
-      <section className="flex-grow w-full max-w-3xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16 flex flex-col items-center">
+      <section className="flex-grow w-full max-w-3xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-8 flex flex-col items-center">
+        <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mb-8 rounded-none overflow-hidden">
+          <Image
+            src="/amaan.jpg"
+            alt="Amaan's profile picture"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
         <p className="mb-8 text-center text-lg sm:text-xl md:text-2xl leading-relaxed">
-          Hello! I&apos;m a passionate web developer specializing in React,
-          Next.js, and modern web technologies. With a keen eye for design and a
-          love for clean, efficient code, I strive to create engaging and
-          user-friendly web experiences. When I&apos;m not coding, you can find
-          me exploring new technologies, contributing to open-source projects,
-          or sharing my knowledge through blog posts and tutorials.
+          Hi, I&lsquo;m Amaan, a freelance developer from Lucknow, India. I work
+          with Next.js and Flutter sometimes. You can find me on Twitter,
+          usually shitposting (and occasionally posting useless stuff too).
+          I&lsquo;m open to work!
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild>
-            <Link href="/socials">Socials</Link>
+            <Link href="https://x.com/amaan8429" target="_blank">
+              Twitter
+            </Link>
           </Button>
           <Button asChild>
             <Link href="/projects">Projects</Link>

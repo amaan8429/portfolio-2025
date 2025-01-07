@@ -1,21 +1,25 @@
-// pages/projects.tsx
 "use client";
 
 import { useEffect, useRef } from "react";
 import ScrambleIn, { ScrambleInHandle } from "@/components/scramble-in";
+import { projectsData } from "@/data/projects";
+import { useRouter } from "next/navigation";
 
 export default function Projects() {
-  const titles = ["Project 1", "Project 2", "Project 3", "Project 4"];
   const scrambleRefs = useRef<(ScrambleInHandle | null)[]>([]);
+  const router = useRouter();
 
   useEffect(() => {
-    titles.forEach((_, index) => {
-      const delay = index * 50;
+    projectsData.forEach((_, index) => {
       setTimeout(() => {
         scrambleRefs.current[index]?.start();
-      }, delay);
+      }, index * 50);
     });
   }, []);
+
+  const handleProjectClick = (index: number) => {
+    router.push(`/projects/${index}`);
+  };
 
   return (
     <main className="min-h-screen w-full flex flex-col">
@@ -27,16 +31,17 @@ export default function Projects() {
 
       <section className="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 sm:py-12 md:py-16">
         <div className="grid gap-6 sm:gap-8 md:gap-10">
-          {titles.map((title, index) => (
+          {projectsData.map((project, index) => (
             <div
               key={index}
-              className="transform hover:scale-105 transition-transform duration-200"
+              className="transform hover:scale-105 transition-transform duration-200 cursor-pointer"
+              onClick={() => handleProjectClick(index)}
             >
               <ScrambleIn
                 ref={(el) => {
                   scrambleRefs.current[index] = el;
                 }}
-                text={title}
+                text={project.title}
                 scrambleSpeed={25}
                 scrambledLetterCount={5}
                 autoStart={false}
