@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dialog";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { leaveMessage } from "@/app/actions";
+import { leaveMessage } from "@/app/actions/actions";
 
 export function LeaveMessageModal() {
   const [isOpen, setIsOpen] = useState(false);

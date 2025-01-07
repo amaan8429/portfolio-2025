@@ -5,7 +5,7 @@ import { useState, useRef } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { ModeToggle } from "./theme-toggle";
-import { VisitorCounter } from "./visitor-counter";
+import VisitorCounter from "./visitor-counter";
 import { TimeToRead } from "./time-to-read";
 import { LeaveMessageModal } from "./leave-message-modal";
 
