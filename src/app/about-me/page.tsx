@@ -2,6 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { aboutMe } from "@/data/aboutMe";
+import { loomVideoUrl } from "@/data/loomVideo";
+
+const getLoomEmbedUrl = (loomUrl: string) => {
+  // Handle Loom URLs - extract video ID and create embed URL
+  const loomId = loomUrl.match(/loom\.com\/share\/([a-zA-Z0-9]+)/)?.[1];
+  if (loomId) {
+    return `https://www.loom.com/embed/${loomId}?sid=undefined&t=0`;
+  }
+  return loomUrl;
+};
 
 export default function AboutMe() {
   return (
@@ -26,6 +36,26 @@ export default function AboutMe() {
         <p className="mb-8 text-center text-lg sm:text-xl md:text-2xl leading-relaxed">
           {aboutMe}
         </p>
+
+        <div className="mb-8 w-full max-w-4xl">
+          <h2 className="text-xl font-bold mb-4 text-center">About Me Video</h2>
+          <div className="relative w-full overflow-hidden rounded-lg border mx-auto" style={{ 
+            paddingBottom: '56.25%',
+            minHeight: '200px'
+          }}>
+            <iframe
+              src={getLoomEmbedUrl(loomVideoUrl)}
+              className="absolute top-0 left-0 w-full h-full border-0"
+              allowFullScreen
+              title="About Me - Amaan"
+              style={{ 
+                border: 'none',
+                overflow: 'hidden',
+                minHeight: '200px'
+              }}
+            />
+          </div>
+        </div>
 
         <div className="flex flex-wrap justify-center gap-4">
           <Button asChild>
