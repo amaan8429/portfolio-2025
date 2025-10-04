@@ -32,43 +32,55 @@ const Portfolio = () => {
       <section className="mb-8">
         <h2 className="text-2xl font-bold mb-4 border p-2">Projects</h2>
         <div className="space-y-4">
-          {projectsData.map((project) => (
-            <div key={project.title} className="border p-4">
-              <h3 className="font-bold text-xl mb-2">{project.title}</h3>
-              <p className="mb-3">{project.description}</p>
+          {projectsData
+            .filter((project) => project.focus === true && project.hide === false)
+            .map((project) => (
+              <div key={project.title} className="border p-4">
+                <h3 className="font-bold text-xl mb-2">{project.title}</h3>
+                <p className="mb-3">{project.description}</p>
 
-              <div className="mb-3">
-                <h4 className="font-bold mb-1">Tech Stack:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {project.techStack.map((tech) => (
-                    <span key={tech} className="border px-2 py-0.5 text-sm">
-                      {tech}
-                    </span>
-                  ))}
+                <div className="mb-3">
+                  <h4 className="font-bold mb-1">Tech Stack:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {project.techStack.map((tech) => (
+                      <span key={tech} className="border px-2 py-0.5 text-sm">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mb-3">
+                  <h4 className="font-bold mb-1">Features:</h4>
+                  <ul className="list-disc pl-4">
+                    {project.features.map((feature, index) => (
+                      <li key={index} className="mb-1">
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-4 pt-2 border-t">
+                  <a href={project.github} className="underline mr-4">
+                    GitHub
+                  </a>
+                  <a href={project.demo} className="underline mr-4">
+                    Demo
+                  </a>
+                  {project.demoVideo && (
+                    <a
+                      href={project.demoVideo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline"
+                    >
+                      📹 Demo Video
+                    </a>
+                  )}
                 </div>
               </div>
-
-              <div className="mb-3">
-                <h4 className="font-bold mb-1">Features:</h4>
-                <ul className="list-disc pl-4">
-                  {project.features.map((feature, index) => (
-                    <li key={index} className="mb-1">
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mt-4 pt-2 border-t">
-                <a href={project.github} className="underline mr-4">
-                  GitHub
-                </a>
-                <a href={project.demo} className="underline">
-                  Demo
-                </a>
-              </div>
-            </div>
-          ))}
+            ))}
         </div>
       </section>
 
