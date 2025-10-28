@@ -1,0 +1,209 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.65in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Custom commands for resume items
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\begin{document}
+\vspace*{10pt} % Add some space at the top
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape \textbf{Mohd Amaan}} \\ \vspace{1pt}
+    \small \raisebox{-0.1\height} ~ \href{mailto:amaanrizvi73@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  {amaanrizvi73@gmail.com}} ~ 
+    \href{https://www.linkedin.com/in/amaan8429}{\raisebox{-0.2\height}\faLinkedin\ {LinkedIn}} ~
+    \href{https://github.com/amaan8429}{\raisebox{-0.2\height}\faGithub\ {GitHub}} ~
+    \href{https://amaan.zip}{\raisebox{-0.2\height}\faGlobe\ {amaan.zip}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+
+    \item
+      \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{Dr. A. P. J. Abdul Kalam Technical University} & \textbf{\small Expected May 2026} \\
+        \textit{\small Bachelor of Technology in Computer Science} & \textit{\small Lucknow, India} \\
+      \end{tabular*}
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+          {\textbf{Cur8t} $|$ \emph{Next.js, TypeScript, ShadcnUI, AI, Neon, Drizzle}}{{\href{https://cur8t.com/}{\faGlobe\ Live} \href{https://github.com/amaan8429/cur8t}{\faGithub\ GitHub} \href{https://x.com/amaan8429/status/1960596953479438587}{\faVideo\ Video}}}
+          \resumeItemListStart
+            \resumeItem{AI-powered bookmark manager with smart organization, browser extension, and GitHub sync integration.}
+            \resumeItem{Features collections management (public/private/protected), article link extraction, and collaboration tools.}
+            \resumeItem{Built with microservices architecture using Docker, Redis caching, and comprehensive export options.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+
+        \resumeProjectHeading
+          {\textbf{Rotreels} $|$ \emph{Next.js, TypeScript, ShadcnUI, AI, PostgreSQL, FFmpeg}}{{\href{https://rotreels.com/}{\faGlobe\ Live} \href{https://github.com/amaan8429/rotreels}{\faGithub\ GitHub}}}
+          \resumeItemListStart
+            \resumeItem{AI-powered video creation platform for viral content with character voices, voice cloning, dynamic backgrounds.}
+            \resumeItem{Implements multi-voice system with ElevenLabs integration, Whisper for transcription, and AWS S3 storage.}
+            \resumeItem{Features conversational AI, real-time progress tracking, and professional video rendering with subtitle system.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+
+        \resumeProjectHeading
+          {\textbf{Emotion Prompt} $|$ \emph{Next.js, TypeScript, ShadcnUI, OpenAI API, PWA}}{{\href{https://emotionpromptingis.art}{\faGlobe\ Live} \href{https://github.com/amaan8429/emotion-prompt}{\faGithub\ GitHub}}}
+          \resumeItemListStart
+            \resumeItem{Enhance AI prompts with psychological stimuli based on research proven to improve LLM performance.}
+            \resumeItem{Features psychological stimuli integration, research-based optimization, and real-time prompt improvement.}
+            \resumeItem{Built with beautiful responsive UI, PWA support, offline capabilities, and scientific data visualizations.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+
+        \resumeProjectHeading
+          {\textbf{Next Clean} $|$ \emph{TypeScript}}{{\href{https://www.npmjs.com/package/next-clean}{\faGlobe\ Live} \href{https://github.com/amaan8429/next-clean}{\faGithub\ GitHub}}}
+          \resumeItemListStart
+            \resumeItem{A clean Next.js template without the boilerplate code. Type-safe and easy to use.}
+          \resumeItemListEnd
+    
+    \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {B2B Stealth}{Jan 2025 -- Present}
+      {Full Stack Developer}{}
+      \resumeItemListStart
+        \resumeItem{Building a B2B SaaS platform for a US-based startup, collaborating with a team of talented individuals.}
+        \resumeItem{Worked in Firebase and FastAPI backend while developing the entire Flutter frontend from scratch.}
+        \resumeItem{Optimized the product using various caching and database indexing techniques.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Ayka India Trust}{April 2024 -- June 2024}
+      {Backend Developer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Implemented SMTP, volunteer registration systems, and integrations to streamline workflows.}
+        \resumeItem{Assisted in building their volunteer database management system.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages:} TypeScript, JavaScript, Python, Dart, Solidity, Go \\
+    \textbf{Frontend:} Next.js, React.js, Flutter, Tailwind CSS, ShadcnUI, Framer Motion, Radix UI \\
+    \textbf{Backend \& AI:} FastAPI, NestJS, OpenAI API, ElevenLabs, Whisper, FFmpeg, Remotion \\
+    \textbf{Databases:} PostgreSQL, MongoDB, Redis, Neon, Drizzle, Prisma \\
+    \textbf{DevOps:} Docker, Nginx, Vercel, AWS S3, BullMQ, Zustand, React Query \\
+    \textbf{Developer Tools:} Postman, PostHog, Upstash, Firebase, Supabase, Hardhat, Clerk
+  }}
+\end{itemize}
+\vspace{-16pt}
+
+\section{Certifications \& Achievements}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Certifications:} NYU Startup Accelerator Program \\[3pt]
+      \textbf{Leadership:} Organizer of college-level hackathons and college events.\\[3pt]
+      \textbf{Content Creation:} Tech content creator with viral Twitter videos and IG Reels. \\[3pt]
+    }}
+ \end{itemize}
+
+
+\end{document}

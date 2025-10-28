@@ -1,0 +1,238 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.65in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Custom commands for resume items
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+\begin{document}
+\vspace*{10pt} % Add some space at the top
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape \textbf{Buddhsen Tripathi}} \\ \vspace{1pt}
+    \small \raisebox{-0.1\height} ~ \href{mailto:bt2609@nyu.edu}{\raisebox{-0.2\height}\faEnvelope\  {bt2609@nyu.edu}} ~ 
+    \href{https://www.linkedin.com/in/buddhsen-tripathi/}{\raisebox{-0.2\height}\faLinkedin\ {LinkedIn}} ~
+    \href{https://github.com/buddhsen-tripathi}{\raisebox{-0.2\height}\faGithub\ {GitHub}} ~
+    \href{https://www.buddhsentripathi.com/}{\raisebox{-0.2\height}\faGlobe\ {buddhsen.me}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+
+    \item
+      \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{New York University} & \textbf{\small Sep 2025 -- May 2027} \\
+        \textit{\small Master of Science in Computer Science} & \textit{\small New York, USA} \\
+      \end{tabular*}
+      \vspace{-3pt}
+      {\small \textbf{Coursework:} Machine Learning, Data Structures and Algorithms, Computer Networking}
+      \vspace{1pt}
+
+    \item
+      \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{Vellore Institute of Technology} & \textbf{\small Jul 2019 -- May 2023} \\
+        \textit{\small Bachelor of Technology in Computer Science and Engineering, GPA: 3.5 (8.76/10)} & \textit{\small Vellore, India} \\
+      \end{tabular*}
+
+  \resumeSubHeadingListEnd
+
+
+% %-----------RELEVANT COURSEWORK-----------
+% \section{Relevant Coursework}
+%         \begin{multicols}{3}
+%             \begin{itemize}[itemsep=-4pt, parsep=4pt]
+%                 \item\small Data Structures
+%                 \item\small CS50: Introduction to CS
+%                 \item\small Object-Oriented Programming
+%                 \item\small CS229: Machine Learning
+%                 \item\small Database Management System
+%                 \item\small CS50W: Web programming \end{itemize} \end{multicols}
+%         \vspace*{1.2\multicolsep} % Adjust space after multicols if needed
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://amadeus.com/en}{Amadeus Software Labs}}{Jan 2023 -- Aug 2025}
+      {Software Development Engineer I (Intern $\rightarrow$ Full-time)}{Bengaluru, India}
+      \resumeItemListStart
+        \resumeItem{Developed and optimized document generation systems using \textbf{Java Spring}, \textbf{Freemarker}, and \textbf{Angular} within an \textbf{Agile} environment, improving rendering latency by $12\%$ across thousands of daily airline transactions.}
+        \resumeItem{Integrated communication protocols and automated legacy email workflows, reducing manual processing time by $27\%$ and enabling real-time, error-free data exchange between distributed systems.}
+        \resumeItem{Led migration of $75\%$ of on-premise services to \textbf{Azure Cloud}, implemented CI/CD pipelines, containerized services, and achieved $99.9\%$ uptime with enhanced scalability and fault tolerance.}
+        \resumeItem{Performed security analysis using \textbf{Fortify} and \textbf{BlackDuck}, identifying and fixing high/critical issues to improve code reliability and reduce vulnerabilities by $15\%$.}
+        \resumeItem{Resolved over $200$ production incidents through root-cause analysis and automation, improving deployment efficiency, monitoring, and long-term system stability.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\vspace{-16pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+
+        \resumeProjectHeading
+          {\textbf{DeepFind.Me} $|$ \emph{Next.js, NestJS, TypeScript, Supabase, Cloudflare, OpenAI API}}{{}{\href{https://deepfind.me}{\faGlobe\ Live}}}
+          \resumeItemListStart
+            \resumeItem{Founded and developed an \textbf{OSINT platform} offering $30+$ intelligence and AI-powered tools, scaled to \textbf{1.1k+ users}, \textbf{45k+ quarterly visitors}, and \textbf{350k+ monthly edge requests}.}
+            \resumeItem{Integrated an \textbf{AI-powered OSINT Agent} using the \textbf{OpenAI API} and \textbf{Perplexity Search API} to perform automated investigations and contextual data analysis across public sources.}
+          \resumeItemListEnd
+          \vspace{-13pt}
+
+        \resumeProjectHeading
+  {\textbf{OpenVScan} $|$ \emph{Next.js, NestJS, Python, Docker, OpenAI API}}{{{\href{https://github.com/buddhsen-tripathi/openvscan}{\faGithub\ GitHub}}}}
+  \resumeItemListStart
+    \resumeItem{Building \textbf{OpenVScan}, a web-based vulnerability scanner that integrates \textbf{open-source tools with AI} to deliver smarter, faster, and more reliable pre-production security testing.}
+    \resumeItem{\textbf{Maintainer and active developer}; project received \textbf{10+ GitHub stars} and community contributions for expanding scanning capabilities and AI-based analysis modules.}
+  \resumeItemListEnd
+  \vspace{-13pt}
+
+        \resumeProjectHeading
+  {\textbf{Bucket0.com} $|$ \emph{Next.js, NestJS, Supabase, Cloudflare R2, AWS S3}}{{{}{\href{https://bucket0.com}{\faGlobe\ Live}}}}
+  \resumeItemListStart
+    \resumeItem{Developed a multi-cloud storage wrapper enabling users to connect and manage any \textbf{S3-compatible bucket} (R2, AWS S3, DigitalOcean) via a unified client.}
+    \resumeItem{Offers secure and scalable \textbf{cloud storage services} with tiered pricing, on-demand storage allocation, and built-in file-sharing capabilities, providing a cost-effective alternative to Google Drive.}
+  \resumeItemListEnd
+    
+    \resumeSubHeadingListEnd
+
+
+%-----------OPEN SOURCE CONTRIBUTIONS-----------
+% \section{Open Source Contributions}
+%  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=3pt]
+%     \item \small{{1. \textbf{GirlScript Summer of Code 2024} $|$ \emph{Project Admin}: \textbf{FinVeda} (\href{https://finveda.vercel.app/}{Live}, \href{https://github.com/ayush-that/FinVeda}{GitHub}) - An AI-powered financial literacy platform. Managed \textbf{1,448 pull requests} and \textbf{1,897 issues}, providing guidance and support to contributors.}}
+%     \item \small{{2. \textbf{Daytona} $|$ \emph{Contributor} - Enhanced Web3 developer experience by contributing a boilerplate integrating \textbf{React, Vite, TypeScript, shadcn/ui, \& Coinbase Wallet SDK}, significantly reducing dApp project setup time. (\href{https://github.com/daytonaio/sample-react-coinbase-connect}{GitHub}, \href{https://dev.to/shydev69/my-journey-building-apps-with-coinbase-sdk-and-daytona-3akp}{Blog})}}
+%  \end{itemize}
+%  \vspace{-16pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Languages:} Java, Python, C++, SQL, JavaScript, TypeScript, HTML/CSS \\
+    \textbf{Frameworks:} Angular, React, Next.js, Node.js, NestJS, Supabase, Flask, TensorFlow, Express, TailwindCSS \\
+    \textbf{Databases:} MySQL, PostgreSQL, MongoDB \\
+    \textbf{Cloud and DevOps:} AWS, Azure, Google Cloud Platform (GCP), Docker \\
+    \textbf{Testing and CI/CD:} Git, Jenkins, GitHub Actions, JUnit
+  }}
+\end{itemize}
+\vspace{-16pt}
+
+
+% %-----------LEADERSHIP / ACHIEVEMENTS-----------
+% \section{Leadership / Achievements}
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item
+%      {1. 1st place at \textbf{Udyamitsav’24 Hackathon} (IIT Jammu) for developing an AI-powered financial literacy platform.} \\
+%         {2. 1st place at \textbf{SummerHack 1.0 Hackathon} for creating a computer vision-based navigation system for blind.} \\
+%     {3. Secured a \textbf{\$10,000 grant} from \textbf{Solana Foundation} for developing \textbf{\href{https://www.qwik.skin/}{Qwik.Skin}.}} \\
+%     {4.  \textbf{AWS Cloud Club Captain}{: Leading AWS Cloud Club BVCOE, organized activities, and sessions on cloud computing.} \\
+%     {5. Grand Finalist in \textbf{Smart India Hackathon 2024}, out of \textbf{492,960 participants}.} \\
+%     }}
+%  \end{itemize}
+%  \vspace{-16pt}
+
+\section{Certifications \& Achievements}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Certifications:} Fundamentals of Accelerated Computing with CUDA Python (NVIDIA), Web Application Technologies and Django (University of Michigan), Responsive Web Design (freeCodeCamp), Advent of Cyber 2021 (TryHackMe). \\[3pt]
+      \textbf{DSA Practice:} Solved $200+$ problems on LeetCode with a peak rating of $1651$; \textbf{3-star} rated ($1662$) on CodeChef. \\[3pt]
+      \textbf{Cybersecurity:} Level $10$ hacker on TryHackMe with $16$ badges and a peak global rank of $9906$. \\[3pt]
+      \textbf{Soft Skills:} Strong problem-solving, system design, and collaboration abilities gained through Agile development and cross-functional teamwork.
+    }}
+ \end{itemize}
+
+
+\end{document}
