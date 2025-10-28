@@ -56,7 +56,7 @@ const Portfolio = () => {
     <div className="max-w-4xl mx-auto p-4 sm:p-6 md:p-8 font-mono">
       <header className="mb-8 text-center border-b pb-4">
         <h1 className="text-3xl font-bold mb-2">Amaan</h1>
-        <p>freelance developer</p>
+        <p>Full Stack Developer</p>
       </header>
 
       <section className="mb-8">
