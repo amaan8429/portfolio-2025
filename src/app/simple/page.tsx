@@ -108,13 +108,13 @@ const Portfolio = () => {
                 <div key={project.title} className="border">
                   <button
                     onClick={() => toggleProject(index)}
-                    className="w-full p-3 sm:p-4 text-left hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                    className="w-full p-3 sm:p-4 text-left hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
                   >
                     <div className="flex justify-between items-center">
                       <h3 className="font-bold text-xl">{project.title}</h3>
                       <span className="text-lg">{isExpanded ? "−" : "+"}</span>
                     </div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                    <p className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 mt-1">
                       {project.description}
                     </p>
                   </button>
