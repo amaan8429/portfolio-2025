@@ -16,6 +16,18 @@ export const socialLinks: SocialLink[] = [
     wide: true,
   },
   {
+    title: "Instagram page",
+    url: "https://www.instagram.com/technerdpeter",
+    handle: "@technerdpeter",
+    blurb: "tech & developer content",
+  },
+  {
+    title: "Instagram page",
+    url: "https://www.instagram.com/interviewpeter",
+    handle: "@interviewpeter",
+    blurb: "interview & career content",
+  },
+  {
     title: "GitHub",
     url: "https://github.com/amaan8429",
     handle: "amaan8429",
