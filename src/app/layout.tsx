@@ -12,8 +12,15 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Amaan's Portfolio",
-  description: "bruhhh",
+  title: "Amaan — Developer, Creator & Founder",
+  description:
+    "Amaan from Lucknow — full-stack developer (cur8t, rotreels), content creator (120K+ Instagram), and founder of the content agency AurbitLabs.",
+  openGraph: {
+    title: "Amaan — Developer, Creator & Founder",
+    description:
+      "Full-stack developer, 120K+ Instagram creator, and content-agency founder.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -24,12 +31,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${jetBrainsMono.variable} ${jetBrainsMono.variable} antialiased`}
+        className={`${jetBrainsMono.variable} ${jetBrainsMono.variable} bg-background text-foreground antialiased`}
+        suppressHydrationWarning
       >
-        <ThemeProvider>
-          {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex min-h-screen flex-col">
+            <div className="flex-1">{children}</div>
+            <SiteFooter />
+          </div>
           <Analytics />
-          <SiteFooter />
         </ThemeProvider>
         <Toaster />
       </body>
