@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# self-hosted videos (served from Vercel Blob in production, kept local for dev)
+/public/videos
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
