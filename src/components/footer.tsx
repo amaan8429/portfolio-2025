@@ -54,6 +54,12 @@ export default function SiteFooter() {
             </div>
 
             <div className="flex items-center space-x-4">
+              <Link
+                href="/socials"
+                className="text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline"
+              >
+                Socials
+              </Link>
               <span className="text-sm text-muted-foreground">
                 Made by{" "}
                 <Link
