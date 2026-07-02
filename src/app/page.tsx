@@ -9,6 +9,7 @@ import { stats } from "@/data/stats";
 import { introReel } from "@/data/content";
 import { projectsData } from "@/data/projects";
 import { GithubContributions } from "@/components/github-contributions";
+import { LinksShowcase } from "@/components/links-showcase";
 import Link from "next/link";
 
 const cur8t = projectsData.find((p) => p.title === "cur8t");
@@ -172,6 +173,17 @@ export default function Home() {
       >
         → See all projects
       </Link>
+
+      {/* Links showcase — learn more about me */}
+      <section className="mt-14">
+        <h2 className="mb-1 text-xl font-bold tracking-tight sm:text-2xl">
+          Learn more about me
+        </h2>
+        <p className="mb-5 text-sm text-muted-foreground">
+          Every link is a different side of me — pick a door.
+        </p>
+        <LinksShowcase />
+      </section>
     </main>
   );
 }
