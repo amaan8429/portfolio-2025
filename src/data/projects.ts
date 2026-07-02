@@ -1,3 +1,5 @@
+import { videos } from "./videos";
+
 export const projectsData = [
   {
     title: "cur8t",
@@ -27,6 +29,7 @@ export const projectsData = [
     github: "https://github.com/amaan8429/cur8t",
     demo: "https://cur8t.com",
     demoVideo: "https://x.com/amaan8429/status/1960596953479438587",
+    demoVideoFile: videos.cur8t,
     focus: true,
     hide: false,
   },
@@ -68,7 +71,9 @@ export const projectsData = [
     ],
     github: "https://github.com/amaan8429/rotreels",
     demo: "https://rotreels.com",
-    demoVideo: "",
+    demoVideo: "https://x.com/amaan8429/status/1998717985247334770",
+    demoVideoFile: videos.rotreels,
+    live: false,
     focus: true,
     hide: false,
   },
