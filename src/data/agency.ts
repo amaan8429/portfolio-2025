@@ -4,8 +4,7 @@ export const agency = {
   name: "AurbitLabs",
   tagline: "A content agency I started, built a team around, and scaled.",
   note: "Still early — there isn't a big case-study deck yet. Here's the honest snapshot of what we've built and who we've worked with so far.",
-  // TODO: add a real url when the site/landing is live.
-  url: "",
+  url: "https://www.instagram.com/aurbitlabs/",
   highlights: [
     {
       metric: "$2.5K / month",

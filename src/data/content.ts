@@ -11,9 +11,9 @@ export type ContentItem = {
 };
 
 export const instagram = {
-  handle: "@amaan.8429",
+  handle: "@amaan.zip",
   followers: "120K+",
-  url: "https://www.instagram.com/amaan.8429",
+  url: "https://www.instagram.com/amaan.zip",
 };
 
 // The Instagram pages I built and grew (together 120K+ followers).

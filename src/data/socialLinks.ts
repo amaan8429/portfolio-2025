@@ -13,7 +13,11 @@ export const socialLinks = [
   },
   {
     title: "Instagram",
-    url: "https://www.instagram.com/amaan.8429",
+    url: "https://www.instagram.com/amaan.zip",
+  },
+  {
+    title: "AurbitLabs",
+    url: "https://www.instagram.com/aurbitlabs",
   },
   {
     title: "Discord",

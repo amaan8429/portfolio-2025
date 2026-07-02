@@ -15,6 +15,24 @@ export default function CreatePage() {
       intro={`Content & audience. I built and grew Instagram pages to ${instagram.followers} followers combined, and I make face-cam videos for X and for brands.`}
     >
       {/* Pages I built */}
+      {/* Main personal account */}
+      <a
+        href={instagram.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group mb-10 flex items-center justify-between gap-4 border border-border bg-gradient-to-br from-accent/50 to-transparent p-5 transition-all hover:-translate-y-0.5 hover:border-foreground/40"
+      >
+        <div>
+          <div className="text-xs uppercase tracking-widest text-muted-foreground">
+            My main account
+          </div>
+          <div className="mt-1 text-lg font-medium">{instagram.handle}</div>
+        </div>
+        <span className="text-muted-foreground transition-colors group-hover:text-foreground">
+          ↗
+        </span>
+      </a>
+
       <h2 className="mb-4 text-xs uppercase tracking-widest text-muted-foreground">
         Pages I built
       </h2>

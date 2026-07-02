@@ -104,7 +104,7 @@ export default function AgencyPage() {
           rel="noopener noreferrer"
           className="mt-6 inline-block border border-border px-4 py-2 text-sm transition-colors hover:bg-accent"
         >
-          Visit {agency.name} →
+          {agency.name} on Instagram ↗
         </a>
       )}
     </PageShell>
